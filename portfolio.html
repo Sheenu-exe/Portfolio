@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9a26642d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+   
+
+</head>
+<style>
+    /* hero background image */
+    
+.bgimage {
+    height:100vh;
+    background: url('https://i.ibb.co/RTyrGHb/20221003-114749-4.jpg');
+    background-size:cover;
+    position:relative;
+}
+/* text css above hero image*/
+.hero_title {
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+.hero_desc {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.text-center{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+/* Navbar css*/
+.navbar-brand{
+    text-shadow: 2px 2px black;
+        font-family: 'Jost', sans-serif;
+}
+.navbar-brand , .nav-link{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border: 112px #000000;
+}
+/* about section image css */
+.imageAboutPage {
+    width: 100%;
+}
+/* services section css */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+   
+    border: 1px solid #008000;
+}
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+    color: #1755ff;
+}
+.fab {
+    color: #000000;
+}
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}
+@media screen and (max-width:450px){
+    .bgimage{
+        background: url('https://i.ibb.co/VN8qHyb/20221003-114749-5.jpg');
+
+        background-size: 375px 667px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+    position:relative;
+    }
+    .hero_title{
+        font-size: 3.5rem;
+             color: white;
+             font-weight: bolder;
+    }
+    .navbar-brand{
+        font-size: 30px;
+    }
+}
+/* display background color black on navbar scroll */
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true" style="font-size: 2.0rem;margin-bottom:5px;color: white;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <script>
+                    // add class navbarDark on navbar scroll
+                const header = document.querySelector('.navbar');
+                
+                window.onscroll = function() {
+                    var top = window.scrollY;
+                    if(top >=650) {
+                        header.classList.add('navbarDark');
+                    }
+                    else {
+                        header.classList.remove('navbarDark');
+                    }
+                }
+                </script>
+            </div>
+        </div>
+    </nav>
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Hi, it's me Sachin!</h2>
+                <p class="hero_desc">I am a Professional Frontend Developer in Pune.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Me</h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="https://i.ibb.co/qj5xBv7/Snapinsta-app-270356116-1766903240317767-8183628179630766971-n-1080-3.jpg" class= "imageAboutPage" alt="" >
+                </div>
+                <div class="col-lg-8">
+                    <p>  Sachin's strong technical skills, proficiency in various web development tools and frameworks, and ability to collaborate effectively make him a talented and skilled frontend developer with a passion for creating engaging and user-friendly web experiences.
+                        
+                    </p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Name: Sachin Parihar</li>
+                                <li>Age: 18</li>
+                                <li>Occupation:Front-end Developer</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Qualification: 12th Passed</li>
+                                <li>Self-Taught Developer</li>
+                                <li><i class="fa-regular fa-calendar-check"></i>10.02.2005</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <p>  Sachin Suresh Parihar is a self-taught developer who has always been passionate about technology and design. He started experimenting with coding and web design at the age of 17   , and since then, he has been honing his skills through various online courses, tutorials, and projects. Despite facing financial constraints, Sachin was determined to pursue his passion and decided to drop out of his undergraduate program to focus on his career in web development. <br>
+                            <br>
+                            Over the years, Sachin has gained expertise in various frontend technologies such as HTML, CSS, JavaScript, React, and Angular. He has also developed a keen eye for design and user experience, which has helped him create visually appealing and intuitive websites and applications. In addition, Sachin is an avid learner who is always looking for new challenges and opportunities to grow professionally. <br>
+                            <br>
+                            Currently, Sachin is learning as a web developer and designer, working on various projects. He is also exploring new technologies and tools to stay up-to-date with the latest trends in the field. In the future, Sachin hopes to establish his own web development agency and help businesses create compelling digital experiences for their customers. <br>
+                            <br>
+                            Apart from his technical skills, Sachin is also known for his strong work ethic and attention to detail. He believes that every project he takes on is an opportunity to learn and grow, and he always strives to deliver the best possible results to his friends. His ability to communicate effectively and collaborate with team members has also earned him a reputation as a reliable and trustworthy professional. <br>
+                            <br>
+                            Sachin has a diverse set of interests and talents. In addition to being a skilled developer and designer, he also has a spiritual side and a great sense of humor. These qualities make him a well-rounded individual who can bring a unique perspective to any project or team.
+
+Furthermore, Sachin's talent for photography is another aspect of his creative side. He has a keen eye for capturing beautiful moments and has a natural ability to tell stories through his images. His passion for photography also reflects his appreciation for the beauty in life and his ability to find joy in the little things.<br>
+                            <br>
+                            Despite facing numerous challenges and obstacles on his journey, Sachin remains optimistic and determined to achieve his goals. He believes that his passion for technology and design, combined with his hard work and dedication, will help him reach new heights in his career.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+               <!-- services section-->
+    <section id="services">
+        <div class="container">
+            <h1 class="text-center">Services</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class="fas servicesIcon fa-clock"></i>
+                            <h4 class="card-title mt-3">Website Development</h4>
+                            <p class="card-text mt-3">Sachin is a skilled frontend developer with expertise in HTML, CSS, JavaScript, and popular frameworks such as ReactJS and AngularJS. He also has experience in creating responsive web designs and using web development tools to improve workflow efficiency.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-layer-group'></i>
+                            <h4 class="card-title mt-3">Website Design</h4>
+                            <p class="card-text mt-3">He combines his expertise in web development with his understanding of design principles such as color theory, typography, and layout to create engaging and user-friendly website designs that resonate with users.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-search'></i>
+                            <h4 class="card-title mt-3">SEO</h4>
+                            <p class="card-text mt-3"> has a basic understanding of SEO (Search Engine Optimization) and its importance in improving website visibility and rankings on search engines.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+                
+            </div>
+            <!-- portfolio section-->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Portfolio</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 1</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 2</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 3</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 4</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 5</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Project 6</h4>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+            
+    </section>
+    <!-- contact section-->
+    <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact Me</h1>
+
+            <div class="row mt-4" style="display: flex; flex-direction: row;">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="overflow:hidden;resize:none;max-width:100%;width:500px;height:500px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Ram+Nagar,+Rahatani,+Pimpri-Chinchwad,+Maharashtra,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="get-map-data">premium bootstrap themes</a><style>#embed-map-canvas .text-marker.map-generator{max-width: 50%; max-height: 100%; background: none;}</style></div>
+
+                        <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap"></a>
+                        <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                        </style>
+                        
+                            <h3><i class="fa-solid fa-phone fa-shake"></i>+91 8668369314</h3>
+                            <h3><i class="fa-regular fa-envelope"></i><a href="pariharsachin5002@gmail.com"></a>Pariharsachin5002@gmail.com</h3>
+                            <h3><i class="fa-brands fa-instagram fa-sm"></i>@sheenu-exe</h3>
+                            
+                         </div>
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </section>
+    <!-- footer section-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <!-- social media icons -->
+            <div class="social-icons mt-4">
+                <a href="https://www.facebook.com/sachin.parihar.353250?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sheenu.exe/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Sheenu_exe?t=_Q2MizbDYV2oBbJ6eqNKiA&s=08 " target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/sachin-parihar-008180264" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Sheenu-exe" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
