@@ -176,7 +176,7 @@ a>.fa-facebook{
     }
     .infom{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .contact-info>h3{
         font-size: 15px;
