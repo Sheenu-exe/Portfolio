@@ -7,7 +7,7 @@
     
 .bgimage {
     height:100vh;
-    background: url('https://i.ibb.co/cLnzmxQ/20221003-114749-4.jpg');
+    background: url('https://i.ibb.co/3MqN02v/20231018-090502-131.jpg');
     background-size:cover;
     position:relative;
 }
@@ -143,7 +143,7 @@ a>.fa-facebook{
 }
 @media screen and (max-width:450px){
     .bgimage{
-        background: url('https://i.ibb.co/VN8qHyb/20221003-114749-5.jpg');
+        background: url('https://i.ibb.co/2NgBKdr/portrait.jpg');
 
         background-size: 375px 667px;
         background-repeat: no-repeat;
