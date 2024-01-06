@@ -52,20 +52,6 @@
                         <a href="Resume (1).pdf" class="nav-link" target="_blank">Resume <i class="fa-solid fa-file-pdf"></i></a>
                     </li>
                 </ul>
-                <script>
-                    // add class navbarDark on navbar scroll
-                const header = document.querySelector('.navbar');
-                
-                window.onscroll = function() {
-                    var top = window.scrollY;
-                    if(top >=650) {
-                        header.classList.add('navbarDark');
-                    }
-                    else {
-                        header.classList.remove('navbarDark');
-                    }
-                }
-                </script>
             </div>
         </div>
     </nav>
@@ -340,5 +326,29 @@
             </div>
         </div>
     </footer>
+    <script>
+        // add class navbarDark on navbar scroll
+    const header = document.querySelector('.navbar');
+    
+    window.onscroll = function() {
+        var top = window.scrollY;
+        if(top >=650) {
+            header.classList.add('navbarDark');
+        }
+        else {
+            header.classList.remove('navbarDark');
+        }
+    }
+
+
+    var Age = document.getElementById("Age");
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+var birthYear = 2005;
+var currentAge = currentYear - birthYear;
+
+Age.appendChild(document.createTextNode("Age :"+currentAge));
+
+    </script>
 </body>
 </html>
